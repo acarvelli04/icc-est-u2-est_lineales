@@ -9,8 +9,8 @@ public class App {
         Node<Person> node3 = new Node<Person>(new Person(20,"Pepito"));
         Node<Person> node4 = new Node<Person>(new Person(10,"Diego"));
 
-        node1.setNext(node2);
-        node1.setPrev(null);
+        node1.setNext(node2); //j->p
+        node1.setPrev(null); //m->p
 
         //node2.setNext(null);
         node2.setPrev(node1);
@@ -22,8 +22,14 @@ public class App {
         node4.setNext(null);
         node4.setPrev(node3);
 
-        System.out.println("Node: " + node1.getValue());
+        //NP.setNext(NP.getNext().getNext())
 
-        System.out.println("Node: " + node2.getValue());
+        System.out.println("Node: " + node1);
+
+        System.out.println("Node: " + node2);
+
+        System.out.println("Node: " + node3);
+
+        System.out.println("Node: " + node4);
     }
 }
