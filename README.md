@@ -1,18 +1,37 @@
-## Getting Started
+# Implementación de Estructura de Datos Lineal: Pila (Stack) en Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 👤 Información del Autor
+**Autor:** Antonio Carvelli
 
-## Folder Structure
+**Materia:** Estructura de Datos  
 
-The workspace contains two folders by default, where:
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 📄 Descripción del Proyecto
+Este proyecto es una implementación práctica de una estructura de datos tipo **Pila (Stack)** construida desde cero en Java.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+El programa demuestra el principio **LIFO** (Last In, First Out - El último en entrar es el primero en salir). En lugar de usar números simples, la pila almacena objetos de la clase `Person` (que contienen nombre y edad), demostrando el uso de **Genéricos (`<T>`)** para hacer el código reutilizable.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 🚀 ¿Cómo funciona? (Explicación Simple)
+Imagina una pila de platos sucios:
+1.  **Push (Insertar):** Pones un plato nuevo encima de los demás. En este código, agregamos personas (`Juan`, `Maria`, `Pepito`, `Diego`) una tras otra.
+2.  **Top (Cima):** El último que agregaste (`Diego`) queda en la parte superior.
+3.  **Pop (Sacar):** Cuando quitas un plato, debes quitar el de arriba primero.
+4.  **Peek (Mirar):** Observas quién está arriba sin sacarlo.
 
-## Dependency Management
+### Estructura del Código:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+* **`models/Node.java`**: Es el contenedor genérico `<T>`. Cada nodo guarda un dato (ej. una Persona) y una referencia (`next`) al siguiente nodo en la lista.
+* **`controllers/Stack.java`**: Es el "cerebro" de la pila. Contiene los métodos lógicos:
+    * `push()`: Agrega a la cima.
+    * `pop()`: Saca de la cima.
+    * `peek()`: Muestra la cima.
+    * `printAllNodes()`: Imprime la lista completa desde la cima hasta el final.
+* **`App.java`**: Es la clase principal (`main`). Aquí se crean las personas, se agregan a la pila y se muestra el resultado en la consola.
+
+
+
+## 📊 Ejemplo de Salida
+Al ejecutar el programa, verás cómo se agregan las personas y luego cómo la estructura "Cima" cambia al usar `pop()`:
+
+![alt text](<assects/Captura de pantalla 2025-12-09 083956.png>)
