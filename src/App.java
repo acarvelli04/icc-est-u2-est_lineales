@@ -7,6 +7,7 @@ public class App {
 
         runStackExample(args);
 
+        //___________________________NODOS_____________________________
         // Node<Person> node1 = new Node<Person>(new Person(30,"Juan"));
         // Node<Person> node2 = new Node<Person>(new Person(35,"Maria"));
         // Node<Person> node3 = new Node<Person>(new Person(20,"Pepito"));
@@ -41,6 +42,7 @@ public class App {
 
     }
 
+    //____________________ STACKS / PILAS ______________________
     public static void runStackExample(String[] args) {
         Stack<Person> persons = new Stack<Person>();
 
