@@ -1,3 +1,4 @@
+import controllers.ListaEnlazada;
 import controllers.Queue;
 import models.Person;
 
@@ -62,18 +63,35 @@ public class App {
     }
 
     public static void runQueuekExample(String[] args) {
-        Queue<Person> persons = new Queue<Person>();
-        persons.enqueue(new Person(30,"Juan"));
-        persons.enqueue(new Person(35,"Maria"));
-        persons.enqueue(new Person(20,"Pepito"));
-        persons.enqueue(new Person(10, "Diego"));
+        // Queue<Person> persons = new Queue<Person>();
+        // persons.enqueue(new Person(30,"Juan"));
+        // persons.enqueue(new Person(35,"Maria"));
+        // persons.enqueue(new Person(20,"Pepito"));
+        // persons.enqueue(new Person(10, "Diego"));
+        // System.out.println("Size=" + persons.size());
+        // persons.printAllNodes();
+        // System.out.println(persons.dequeue());
+        // System.out.println("Primera" + persons.getFirst());
+        // System.out.println("Ultima" + persons.getLast());
+        // System.out.println("Size=" + persons.size());
+        // persons.printAllNodes();
+    }
+
+    public static void runLinkedListExample(String[] args) {
+        ListaEnlazada<Person> persons = new ListaEnlazada<Person>();
+        persons.append(new Person(30,"Juan"));
+        persons.append(new Person(35,"Maria"));
+        persons.append(new Person(20,"Pepito"));
+        persons.append(new Person(10, "Diego"));
         System.out.println("Size=" + persons.size());
         persons.printAllNodes();
-        System.out.println(persons.dequeue());
-        System.out.println("Primera" + persons.getFirst());
-        System.out.println("Ultima" + persons.getLast());
-        System.out.println("Size=" + persons.size());
+        persons.deleteNode(new Person(10, "Diego"));
         persons.printAllNodes();
+        persons.deleteFirst();
+        persons.printAllNodes();
+        persons.deleteLast();
+        persons.printAllNodes();
+        System.out.println("Size=" + persons.size());
     }
 }
 
